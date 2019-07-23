@@ -1,0 +1,181 @@
+@import 'helpers.styl'
+@import 'variables.styl'
+@import '../icomoon/style.css'
+
+*
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+  
+html,
+body
+  height: 100%  
+  
+h1,
+p,
+a
+  font-family: $open-sans
+
+.main 
+  background: url(../images/background.png)
+  background-size: cover
+  width: 100%
+  min-height: 100%
+  
+  .title
+    margin: 0 auto
+    padding-top: 5%
+    width: 100%
+    max-width: 600px
+    
+    a
+      text-align: center
+      display: block
+      
+    h1,
+    p
+      text-align: center
+      color: $white
+    
+    h1
+      font-weight: 700
+      text-transform: uppercase
+      font-size: remify(60px)
+      
+    p
+      font-size: remify(22px)
+      font-weight: 300
+      
+  @media screen and (max-width: 400px)
+    .title
+      h1
+        font-size: remify(40px)
+      
+      p
+        font-size: remify(16px)
+  
+  .form
+    h2
+      text-align: center
+      margin-top: 30px;
+      font-size: remify(23px)
+      font-family: $open-sans
+      color $white
+    
+    form     
+      width: 100%
+      max-width: 335px
+      margin: 50px auto 0 auto
+  
+      .field,
+      .submit
+        font-weight: 300
+        font-family: $open-sans
+        font-style: italic
+        color: $white
+        font-size: remify(15px)
+        
+      .submit
+        margin: 0 auto
+        margin-top: 5px
+
+      .field
+        max-width: 250px
+        width: 100%
+        height: 40px
+        border: 1px solid $white
+        background: transparent
+        padding-left: 10px
+        outline: none
+        
+      .submit 
+        border: 1px solid $green
+        background $green
+        width: 80px
+        height: 42px
+        margin-left: 4px
+        cursor: pointer
+        
+      ::-webkit-input-placeholder 
+        color: $white
+        font-style: italic
+        font-family: $open-sans
+        font-size: remify(15px)
+        
+      :-moz-placeholder
+        color: $white
+        font-style: italic
+        font-family: $open-sans
+        font-size: remify(15px)
+        
+      ::-moz-placeholder
+        color: $white
+        font-family: $open-sans
+        font-style: italic
+        font-size: remify(15px)
+        
+      :-ms-input-placeholder  
+        color: $white
+        font-family: $open-sans
+        font-style: italic
+        font-size: remify(15px)
+        
+      p,
+      a
+        text-align: center
+        color: $white
+        font-style: italic
+        font-size: remify(15px)
+        font-family: $open-sans
+        
+      a
+        text-decoration: none
+        font-weight: bold
+
+  @media screen and (max-width: 350px)
+    .form      
+      text-align: center
+      
+      .field
+        display: block
+        margin: 0 auto
+        text-align: center
+            
+      .submit 
+        width: 250px !important
+        margin-top: 5px
+      
+      p
+        margin-top: 10px
+
+  .social    
+    text-align: center
+    margin-top: 30px
+    
+    a
+      text-decoration: none
+      color: $green
+      font-size: remify(22px)
+      margin: 0 3px          
+      
+  .footer
+    text-align: center
+      
+    p
+      left: 50%
+      transform: translateX(-50%)
+      bottom: 10px
+      position: absolute
+      color $white
+      form-family: $open-sans
+      font-size: remify(13px)
+      font-style: italic
+      
+      i
+       
+        vertical-align: middle
+        margin-left: 6px
+        color: $red
+        font-size: remify(11px)
+        
+  
