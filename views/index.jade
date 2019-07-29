@@ -8,7 +8,7 @@ html
     link(href="css/main.css", rel="stylesheet", type="text/css")
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-  body  
+  body
     .main
       .title
         a(href="http://www.devparana.org/" target="_blank")
@@ -17,10 +17,12 @@ html
         p faça parte da comunidade paranaense de desenvolvedores, cadastre-se em nosso slack!
       .form
         form(method="POST", action="/invite")#join-form
-          input(type="text", name="email", placeholder="fulano@ciclano.com")#slack-email.field
+          input(type="ZW1haWw=", name="ZW1haWw=", placeholder="fulano@ciclano.com").field
           input(type="submit", value="cadastrar").submit
-          p ou faça 
-            a(href="https://devparana.slack.com" target="_blank") login.
+          p ou faça
+            a(href="https://devparana.slack.com" target="_blank").login login.
+          label(for="email").hp
+          input(type="email", name="email", autocomplete="off", placeholder="fulano@ciclano.com")#email.hp
       .social
         a(href="https://www.facebook.com/DeveloperParana" target="_blank").icon-facebook
         a(href="https://twitter.com/DeveloperParana" target="_blank").icon-twitter
@@ -29,10 +31,11 @@ html
         p de devs para devs
           i.icon-heart
   script.
-    var form = document.getElementById('join-form');
-    var email = document.getElementById('slack-email')
-    form.addEventListener('submit', function(evt) {
-      if (!email.value) {
+    var $form = document.getElementById('join-form');
+    $form.addEventListener('submit', function(evt) {
+      var e = $form.querySelector('[name="ZW1haWw="]')
+      var d = $form.querySelector('#email')
+      if (!e.value || d.value) {
         evt.preventDefault();
       }
     });
