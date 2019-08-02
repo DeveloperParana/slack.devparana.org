@@ -18,5 +18,9 @@ module.exports = {
   site: process.env.SITE_URL || 'SITE_URL',
   facebook: process.env.FACEBOOK_URL || 'FACEBOOK_URL',
   twitter: process.env.TWITTER_TOKEN || 'TWITTER_URL',
-  github: process.env.GITHUB_URL || 'GITHUB_URL'
+  github: process.env.GITHUB_URL || 'GITHUB_URL',
+
+  // validação de captcha
+  captchaKey: process.env.CAPTCHA_KEY || 'CAPTCHA_KEY',
+  captchaSecret: process.env.CAPTCHA_SECRET || 'CAPTCHA_SECRET',
 };

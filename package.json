@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
+    "start": "nodemon ./bin/www",
     "build-css": "cd ./public/css &&  ../../node_modules/.bin/stylus --compress < main.styl > main.css"
   },
   "dependencies": {
@@ -11,12 +11,14 @@
     "cookie-parser": "^1.4.0",
     "debug": "^2.2.0",
     "express": "^4.13.0",
+    "express-recaptcha": "^5.0.0",
     "jade": "^1.11.0",
     "morgan": "^1.6.0",
     "request": "^2.62.0",
     "serve-favicon": "^2.3.0"
   },
   "devDependencies": {
+    "nodemon": "^1.19.1",
     "stylus": "^0.54.5"
   }
 }

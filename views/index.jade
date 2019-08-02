@@ -17,6 +17,7 @@ html
         p faça parte da comunidade paranaense de desenvolvedores, cadastre-se em nosso slack!
       .form
         form(method="POST", action="/invite")#join-form
+          !{captcha}
           input(type="ZW1haWw=", name="ZW1haWw=", placeholder="fulano@ciclano.com").field
           input(type="submit", value="cadastrar").submit
           p ou faça
@@ -28,14 +29,24 @@ html
         a(href="https://twitter.com/DeveloperParana" target="_blank").icon-twitter
         a(href="https://github.com/DeveloperParana" target="_blank").icon-github
       .footer
-        p de devs para devs
+        p de pessoas para pessoas
           i.icon-heart
-  script.
-    var $form = document.getElementById('join-form');
-    $form.addEventListener('submit', function(evt) {
-      var e = $form.querySelector('[name="ZW1haWw="]')
-      var d = $form.querySelector('#email')
-      if (!e.value || d.value) {
-        evt.preventDefault();
+    script.
+      var $form = document.getElementById('join-form');
+
+      $form.addEventListener('submit', function(evt) {
+        var e = $form.querySelector('[name="ZW1haWw="]')
+        var d = $form.querySelector('#email')
+        if (!e.value || d.value) {
+          evt.preventDefault()
+        }
+      });
+
+      function captcha_callback(token) {
+         var input = document.createElement('input');
+          input.setAttribute('type', 'hidden');
+          input.setAttribute('name', 'g-recaptcha-response');
+          input.setAttribute('value', token);
+
+          $form.appendChild(input);
       }
-    });
