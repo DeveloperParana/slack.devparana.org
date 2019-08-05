@@ -17,7 +17,7 @@ html
         p faça parte da comunidade paranaense de desenvolvedores, cadastre-se em nosso slack!
       .form
         form(method="POST", action="/invite")#join-form
-          !{captcha}
+          | !{captcha}
           input(type="ZW1haWw=", name="ZW1haWw=", placeholder="fulano@ciclano.com").field
           input(type="submit", value="cadastrar").submit
           p ou faça
