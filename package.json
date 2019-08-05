@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www",
+    "start": "node ./bin/www",
+    "develop": "nodemon  ./bin/www",
     "build-css": "cd ./public/css &&  ../../node_modules/.bin/stylus --compress < main.styl > main.css"
   },
   "dependencies": {
