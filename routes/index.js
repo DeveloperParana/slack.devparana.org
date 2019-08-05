@@ -13,10 +13,10 @@ router.get('/', function(req, res) {
 router.post('/invite', recaptcha.middleware.verify, function(req, res) {
   var field = Buffer.from('email').toString('base64');
   var email = req.body[field];
-  var honeypot = req.body.email || false;
+  var honeypot = ('email' in req.body) ? req.body.email : false;
 
   // se honeypot for omitido da request POST ou for preenchido, passar uma requisição fake de sucesso.
-  if ((!honeypot && honeypot.length)) {
+  if (honeypot === false || (honeypot && honeypot.length)) {
     return res.status(200).send('OK');
   } else if (req.recaptcha.error) {
     return res.status(403).send('Denied');
