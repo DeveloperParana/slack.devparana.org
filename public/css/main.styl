@@ -6,54 +6,54 @@
   padding: 0
   margin: 0
   box-sizing: border-box
-  
+
 html,
 body
-  height: 100%  
-  
+  height: 100%
+
 h1,
 p,
 a
   font-family: $open-sans
 
-.main 
+.main
   background: url(../images/background.png)
   background-size: cover
   width: 100%
   min-height: 100%
-  
+
   .title
     margin: 0 auto
     padding-top: 5%
     width: 100%
     max-width: 600px
-    
+
     a
       text-align: center
       display: block
-      
+
     h1,
     p
       text-align: center
       color: $white
-    
+
     h1
       font-weight: 700
       text-transform: uppercase
       font-size: remify(60px)
-      
+
     p
       font-size: remify(22px)
       font-weight: 300
-      
+
   @media screen and (max-width: 400px)
     .title
       h1
         font-size: remify(40px)
-      
+
       p
         font-size: remify(16px)
-  
+
   .form
     h2
       text-align: center
@@ -61,12 +61,12 @@ a
       font-size: remify(23px)
       font-family: $open-sans
       color $white
-    
-    form     
+
+    form
       width: 100%
       max-width: 335px
       margin: 50px auto 0 auto
-  
+
       .field,
       .submit
         font-weight: 300
@@ -74,7 +74,7 @@ a
         font-style: italic
         color: $white
         font-size: remify(15px)
-        
+
       .submit
         margin: 0 auto
         margin-top: 5px
@@ -87,39 +87,43 @@ a
         background: transparent
         padding-left: 10px
         outline: none
-        
-      .submit 
+
+      .submit
         border: 1px solid $green
         background $green
         width: 80px
         height: 42px
         margin-left: 4px
         cursor: pointer
-        
-      ::-webkit-input-placeholder 
+
+      .hp
+        opacity: 0;
+        transform: translate3d(-100vw, -100vw, 0);
+
+      ::-webkit-input-placeholder
         color: $white
         font-style: italic
         font-family: $open-sans
         font-size: remify(15px)
-        
+
       :-moz-placeholder
         color: $white
         font-style: italic
         font-family: $open-sans
         font-size: remify(15px)
-        
+
       ::-moz-placeholder
         color: $white
         font-family: $open-sans
         font-style: italic
         font-size: remify(15px)
-        
-      :-ms-input-placeholder  
+
+      :-ms-input-placeholder
         color: $white
         font-family: $open-sans
         font-style: italic
         font-size: remify(15px)
-        
+
       p,
       a
         text-align: center
@@ -127,40 +131,43 @@ a
         font-style: italic
         font-size: remify(15px)
         font-family: $open-sans
-        
+
       a
         text-decoration: none
         font-weight: bold
 
+      a.login
+        margin-left: 5px;
+
   @media screen and (max-width: 350px)
-    .form      
+    .form
       text-align: center
-      
+
       .field
         display: block
         margin: 0 auto
         text-align: center
-            
-      .submit 
+
+      .submit
         width: 250px !important
         margin-top: 5px
-      
+
       p
         margin-top: 10px
 
-  .social    
+  .social
     text-align: center
     margin-top: 30px
-    
+
     a
       text-decoration: none
       color: $green
       font-size: remify(22px)
-      margin: 0 3px          
-      
+      margin: 0 3px
+
   .footer
     text-align: center
-      
+
     p
       left: 50%
       transform: translateX(-50%)
@@ -170,12 +177,12 @@ a
       form-family: $open-sans
       font-size: remify(13px)
       font-style: italic
-      
+
       i
-       
+
         vertical-align: middle
         margin-left: 6px
         color: $red
         font-size: remify(11px)
-        
-  
+
+
